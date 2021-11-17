@@ -10,17 +10,35 @@
 		1CEF10A022F922DB00DAD355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF109F22F922DB00DAD355 /* AppDelegate.swift */; };
 		1CEF10A422F922DD00DAD355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEF10A322F922DD00DAD355 /* Assets.xcassets */; };
 		1CEF10A722F922DD00DAD355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEF10A522F922DD00DAD355 /* Main.storyboard */; };
-		1CEF10B022F9342600DAD355 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF10AF22F9342600DAD355 /* CPU.swift */; };
+		1CEF10B022F9342600DAD355 /* CpuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF10AF22F9342600DAD355 /* CpuService.swift */; };
+		709A7A1F2745221D00F65E5D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709A7A1E2745221D00F65E5D /* Quartz.framework */; };
+		709FD7152744DFEC00E5B903 /* SimplePingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FD7142744DFEC00E5B903 /* SimplePingClient.swift */; };
+		709FD7202744E5C100E5B903 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 709FD71E2744E5C000E5B903 /* SimplePing.m */; };
+		70DB015327440F29005A38B0 /* CpuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB015227440F29005A38B0 /* CpuView.swift */; };
+		70DB015527442D94005A38B0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB015427442D94005A38B0 /* View.swift */; };
+		70DB015727443506005A38B0 /* NetworkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB015627443506005A38B0 /* NetworkingView.swift */; };
+		70F7BAB527415E6A00FAA9A4 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7BAB427415E6A00FAA9A4 /* NetworkingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1CEF109C22F922DB00DAD355 /* Menubar RunCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menubar RunCat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CEF109C22F922DB00DAD355 /* RunCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEF109F22F922DB00DAD355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEF10A322F922DD00DAD355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CEF10A622F922DD00DAD355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CEF10A822F922DD00DAD355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CEF10A922F922DD00DAD355 /* Menubar_RunCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Menubar_RunCat.entitlements; sourceTree = "<group>"; };
-		1CEF10AF22F9342600DAD355 /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		1CEF10A922F922DD00DAD355 /* RunCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunCat.entitlements; sourceTree = "<group>"; };
+		1CEF10AF22F9342600DAD355 /* CpuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CpuService.swift; path = RunCat/Service/CpuService.swift; sourceTree = SOURCE_ROOT; };
+		709A7A1E2745221D00F65E5D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		709FD7142744DFEC00E5B903 /* SimplePingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePingClient.swift; sourceTree = "<group>"; };
+		709FD7172744E45100E5B903 /* SimplePing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimplePing.h; path = RunCat/Common/SimplePing.h; sourceTree = "<group>"; };
+		709FD7182744E45100E5B903 /* SimplePing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SimplePing.m; path = RunCat/Common/SimplePing.m; sourceTree = "<group>"; };
+		709FD71E2744E5C000E5B903 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		709FD71F2744E5C100E5B903 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		70C072842744DC07004A71AE /* macApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "macApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		70DB015227440F29005A38B0 /* CpuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CpuView.swift; path = RunCat/View/CpuView.swift; sourceTree = SOURCE_ROOT; };
+		70DB015427442D94005A38B0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		70DB015627443506005A38B0 /* NetworkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingView.swift; sourceTree = "<group>"; };
+		70F7BAB427415E6A00FAA9A4 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				709A7A1F2745221D00F65E5D /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,38 +56,81 @@
 		1CEF109322F922DB00DAD355 = {
 			isa = PBXGroup;
 			children = (
-				1CEF109E22F922DB00DAD355 /* Menubar RunCat */,
+				1CEF109E22F922DB00DAD355 /* RunCat */,
 				1CEF109D22F922DB00DAD355 /* Products */,
+				709FD7162744E45100E5B903 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1CEF109D22F922DB00DAD355 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CEF109C22F922DB00DAD355 /* Menubar RunCat.app */,
+				1CEF109C22F922DB00DAD355 /* RunCat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CEF109E22F922DB00DAD355 /* Menubar RunCat */ = {
+		1CEF109E22F922DB00DAD355 /* RunCat */ = {
 			isa = PBXGroup;
 			children = (
+				709FD71F2744E5C100E5B903 /* SimplePing.h */,
+				709FD71E2744E5C000E5B903 /* SimplePing.m */,
+				709FD7132744DFD400E5B903 /* Infra */,
+				7018783027426CE60044E064 /* View */,
+				7018782F274240A00044E064 /* Service */,
 				1CEF109F22F922DB00DAD355 /* AppDelegate.swift */,
-				1CEF10AF22F9342600DAD355 /* CPU.swift */,
 				1CEF10A322F922DD00DAD355 /* Assets.xcassets */,
 				1CEF10A522F922DD00DAD355 /* Main.storyboard */,
 				1CEF10A822F922DD00DAD355 /* Info.plist */,
-				1CEF10A922F922DD00DAD355 /* Menubar_RunCat.entitlements */,
+				1CEF10A922F922DD00DAD355 /* RunCat.entitlements */,
+				70C072842744DC07004A71AE /* macApp-Bridging-Header.h */,
 			);
-			path = "Menubar RunCat";
+			path = RunCat;
+			sourceTree = "<group>";
+		};
+		7018782F274240A00044E064 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1CEF10AF22F9342600DAD355 /* CpuService.swift */,
+				70F7BAB427415E6A00FAA9A4 /* NetworkingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7018783027426CE60044E064 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70DB015227440F29005A38B0 /* CpuView.swift */,
+				70DB015427442D94005A38B0 /* View.swift */,
+				70DB015627443506005A38B0 /* NetworkingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		709FD7132744DFD400E5B903 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				709FD7142744DFEC00E5B903 /* SimplePingClient.swift */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		709FD7162744E45100E5B903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				709A7A1E2745221D00F65E5D /* Quartz.framework */,
+				709FD7172744E45100E5B903 /* SimplePing.h */,
+				709FD7182744E45100E5B903 /* SimplePing.m */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1CEF109B22F922DB00DAD355 /* Menubar RunCat */ = {
+		1CEF109B22F922DB00DAD355 /* RunCat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CEF10AC22F922DD00DAD355 /* Build configuration list for PBXNativeTarget "Menubar RunCat" */;
+			buildConfigurationList = 1CEF10AC22F922DD00DAD355 /* Build configuration list for PBXNativeTarget "RunCat" */;
 			buildPhases = (
 				1CEF109822F922DB00DAD355 /* Sources */,
 				1CEF109922F922DB00DAD355 /* Frameworks */,
@@ -78,9 +140,9 @@
 			);
 			dependencies = (
 			);
-			name = "Menubar RunCat";
+			name = RunCat;
 			productName = "Menubar RunCat";
-			productReference = 1CEF109C22F922DB00DAD355 /* Menubar RunCat.app */;
+			productReference = 1CEF109C22F922DB00DAD355 /* RunCat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,14 +153,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = "Takuto Nakamura";
+				ORGANIZATIONNAME = Apache;
 				TargetAttributes = {
 					1CEF109B22F922DB00DAD355 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = 1CEF109722F922DB00DAD355 /* Build configuration list for PBXProject "Menubar RunCat" */;
+			buildConfigurationList = 1CEF109722F922DB00DAD355 /* Build configuration list for PBXProject "RunCat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CEF109B22F922DB00DAD355 /* Menubar RunCat */,
+				1CEF109B22F922DB00DAD355 /* RunCat */,
 			);
 		};
 /* End PBXProject section */
@@ -133,8 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CEF10B022F9342600DAD355 /* CPU.swift in Sources */,
+				70F7BAB527415E6A00FAA9A4 /* NetworkingService.swift in Sources */,
+				1CEF10B022F9342600DAD355 /* CpuService.swift in Sources */,
+				70DB015527442D94005A38B0 /* View.swift in Sources */,
 				1CEF10A022F922DB00DAD355 /* AppDelegate.swift in Sources */,
+				70DB015727443506005A38B0 /* NetworkingView.swift in Sources */,
+				709FD7152744DFEC00E5B903 /* SimplePingClient.swift in Sources */,
+				70DB015327440F29005A38B0 /* CpuView.swift in Sources */,
+				709FD7202744E5C100E5B903 /* SimplePing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +331,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -273,19 +342,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Menubar RunCat/Menubar_RunCat.entitlements";
+				CODE_SIGN_ENTITLEMENTS = RunCat/RunCat.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VJ5N2X84K8;
-				INFOPLIST_FILE = "Menubar RunCat/Info.plist";
+				DEVELOPMENT_TEAM = 97465YLV94;
+				INFOPLIST_FILE = "$(SRCROOT)/RunCat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyome.menubar-runcat";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caphe.runcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RunCat/macApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -294,19 +364,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Menubar RunCat/Menubar_RunCat.entitlements";
+				CODE_SIGN_ENTITLEMENTS = RunCat/RunCat.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = VJ5N2X84K8;
-				INFOPLIST_FILE = "Menubar RunCat/Info.plist";
+				DEVELOPMENT_TEAM = 97465YLV94;
+				INFOPLIST_FILE = "$(SRCROOT)/RunCat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kyome.menubar-runcat";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caphe.runcat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RunCat/macApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -314,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CEF109722F922DB00DAD355 /* Build configuration list for PBXProject "Menubar RunCat" */ = {
+		1CEF109722F922DB00DAD355 /* Build configuration list for PBXProject "RunCat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEF10AA22F922DD00DAD355 /* Debug */,
@@ -323,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CEF10AC22F922DD00DAD355 /* Build configuration list for PBXNativeTarget "Menubar RunCat" */ = {
+		1CEF10AC22F922DD00DAD355 /* Build configuration list for PBXNativeTarget "RunCat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEF10AD22F922DD00DAD355 /* Debug */,

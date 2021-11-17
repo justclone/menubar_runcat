@@ -3,6 +3,7 @@
 //  Menubar RunCat
 //
 //  Created by Takuto Nakamura on 2019/08/06.
+//  Modified by Nguyen Ngoc Minh on 11/16/21.
 //  Copyright © 2019 Takuto Nakamura. All rights reserved.
 //
 
@@ -15,25 +16,45 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private let nc = NSWorkspace.shared.notificationCenter
-    private var frames = [NSImage]()
-    private var cnt: Int = 0
     private var isRunning: Bool = false
-    private var interval: Double = 1.0
-    private let cpu = CPU()
-    private var cpuTimer: Timer? = nil
-    private var usage: (value: Double, description: String) = (0.0, "")
-    private var isShowUsage: Bool = false
+    
+    private var viewList = [View]()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        for i in (0 ..< 5) {
-            frames.append(NSImage(imageLiteralResourceName: "cat_page\(i)"))
-        }
         statusItem.menu = menu
-        statusItem.button?.imagePosition = .imageRight
-        statusItem.button?.image = frames[cnt]
-        cnt = (cnt + 1) % frames.count
+        statusItem.button?.subviews.removeAll()
         
+        viewList.append(CpuView())
+        viewList.append(NetworkingView())
+        
+        var prevView: NSView?
+        var tempView: NSView
+        var totalWidth: CGFloat = 0
+        for i in 0..<(viewList.count) {
+            var v = viewList[i]
+            if (prevView == nil) {
+                statusItem.button?.addSubview(v.getView())
+            } else {
+                tempView = v.getView()
+                tempView.setFrameOrigin(NSMakePoint(prevView?.frame.width ?? 0, 0))
+                statusItem.button?.addSubview(tempView)
+            }
+            v.notifier = { () in
+                self.resizeStatusBar()
+            }
+            prevView = v.getView()
+            totalWidth += prevView?.frame.width ?? 0
+        }
+        statusItem.length = totalWidth
         startRunning()
+    }
+    
+    private func resizeStatusBar() {
+        var totalWidth: CGFloat = 0
+        for v in viewList {
+            totalWidth += v.getView().frame.width
+        }
+        statusItem.length = totalWidth
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -56,34 +77,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func startRunning() {
-        cpuTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (t) in
-            self.usage = self.cpu.usageCPU()
-            self.interval = 0.02 * (100 - max(0.0, min(99.0, self.usage.value))) / 6
-            self.statusItem.button?.title = self.isShowUsage ? self.usage.description : ""
-        })
-        cpuTimer?.fire()
+        for v in viewList {
+            v.start()
+        }
         isRunning = true
-        animate()
     }
     
     func stopRunning() {
-        isRunning = false
-        cpuTimer?.invalidate()
-    }
-
-    func animate() {
-        statusItem.button?.image = frames[cnt]
-        cnt = (cnt + 1) % frames.count
-        if !isRunning { return }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + interval) {
-            self.animate()
+        for v in viewList {
+            v.stop()
         }
-    }
-    
-    @IBAction func toggleShowUsage(_ sender: NSMenuItem) {
-        isShowUsage = sender.state == .off
-        sender.state = isShowUsage ? .on : .off
-        statusItem.button?.title = isShowUsage ? usage.description : ""
+        isRunning = false
     }
     
     @IBAction func showAbout(_ sender: Any) {

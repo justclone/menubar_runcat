@@ -3,12 +3,13 @@
 //  Menubar RunCat
 //
 //  Created by Takuto Nakamura on 2019/08/06.
+//  Modified by Nguyen Ngoc Minh on 11/16/21.
 //  Copyright © 2019 Takuto Nakamura. All rights reserved.
 //
 
 import Darwin
 
-public class CPU {
+public class CpuService {
     
     private let loadInfoCount: mach_msg_type_number_t!
     private var loadPrevious = host_cpu_load_info()
@@ -44,7 +45,7 @@ public class CPU {
         let user = 100.0 * userDiff / totalTicks
         
         let value: Double = round((sys + user) * 10.0) / 10.0
-        let description: String = (value >= 100.0) ? "100↑%" : ((value < 10.0 ? " " : "") + String(value)) + "% "
+        let description: String = (value >= 100.0) ? "100↑%" : ((value < 10.0 ? " " : "") + String(value)) + "%"
         
         return (value, description)
     }
